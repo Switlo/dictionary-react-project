@@ -15,10 +15,10 @@ export default function Footer() {
         </a>&nbsp;
         
         | Open-sourced code is on&nbsp;
-        <a href="#top" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Switlo/dictionary-react-project" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
-        &nbsp;and hosted on <a href="#top" target="_blank" rel="noopener noreferrer">Netlify</a>
+        &nbsp;and hosted on <a href="https://keen-jelly-5530d0.netlify.app/" target="_blank" rel="noopener noreferrer">Netlify</a>
       </p>
     </div>
   );
