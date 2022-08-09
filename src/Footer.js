@@ -15,10 +15,10 @@ export default function Footer() {
         </a>&nbsp;
         
         | Open-sourced code is on&nbsp;
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a href="#top" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
-        &nbsp;and hosted on <a href="#" target="_blank" rel="noopener noreferrer">Netlify</a>
+        &nbsp;and hosted on <a href="#top" target="_blank" rel="noopener noreferrer">Netlify</a>
       </p>
     </div>
   );
