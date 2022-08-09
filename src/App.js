@@ -10,6 +10,7 @@ export default function App() {
       <div className="container">
         <header className="App-header">
           <img src={logo} className="App-logo img-fluid" alt="logo" />
+          <h2>What word do you want to look up?</h2>
         </header>
         <main>
           <Dictionary />
