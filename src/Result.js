@@ -9,6 +9,8 @@ export default function Result(props) {
             <h2>
                 {props.result.word}
             </h2>
+            <p>{props.result.phonetic}</p>
+
             {props.result.meanings.map(function(meaning, index) {
                 // return meaning.definitions[0].definition.example;
             return (
@@ -22,6 +24,4 @@ export default function Result(props) {
     } else {
         return null;
     }
-
-  
 }
