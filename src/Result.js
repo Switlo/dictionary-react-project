@@ -1,6 +1,6 @@
 import React from "react";
 import Meaning from "./Meaning.js"
-import ReactPlayer from 'react-player';
+// import ReactPlayer from 'react-player';
 import './App.css';
 
 export default function Result(props) {
@@ -12,7 +12,7 @@ export default function Result(props) {
                 {props.result.word}
             </h2>
             <p>{props.result.phonetics[0].text}</p>
-            <a href={props.result.phonetics[0].audio} target="_blank">
+            <a href={props.result.phonetics[0].audio} target="_blank" rel="noopener noreferrer">
                 Listen
             </a>
 
