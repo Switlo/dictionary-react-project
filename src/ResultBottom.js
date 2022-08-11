@@ -5,11 +5,11 @@ import './App.css';
 
 export default function ResultBottom(props) {
 
-    if(props.result) {
+    if(props.bottom) {
         return (
             <div className="ResultBottom">
                                 
-            {props.result.meanings.map(function(meaning, index) {
+            {props.bottom.meanings.map(function(meaning, index) {
                 // return meaning.definitions[0].definition.example;
             return (
                 <div key={index}>

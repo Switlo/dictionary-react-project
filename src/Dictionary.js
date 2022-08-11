@@ -21,6 +21,10 @@ function search() {
     axios.get(apiUrl).then(handleResponse);
 }
 
+function HandleSubmit(event) {
+    event.preventDefault();
+    search();
+}
 function keyWordChange(event) {
     setKeyWord(event.target.value);
 }
@@ -34,7 +38,7 @@ function load() {
     return (
         <div className="Dictionary">
             <section>
-            <form onSubmit={search}>
+            <form onSubmit={HandleSubmit}>
                 <input className="form-control form-control-sm"
                 type="search"
                 placeholder="Type a word and press Enter"
@@ -43,9 +47,10 @@ function load() {
                 // defaultValue={props.defaultKeyWord}
                 />
             </form>
-            <ResultTop result={result}/>
+            <ResultTop top={result}/>
             </section>
-            <ResultBottom result={result}/>
+            <ResultBottom bottom={result}/>
+               
         </div>
     )
   } else {

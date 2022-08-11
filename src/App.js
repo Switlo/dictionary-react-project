@@ -14,6 +14,7 @@ export default function App() {
         </header>
         <main>
           <Dictionary defaultKeyWord="peace"/>
+          {/* <Dictionary /> */}
         </main>
         <footer className="Footer">
           <Footer />
