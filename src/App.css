@@ -21,3 +21,6 @@
   list-style-type: none;
 }
 
+.Result .react-player {
+  margin: 0px auto;
+}
