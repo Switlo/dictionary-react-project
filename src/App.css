@@ -17,4 +17,6 @@
   color: rgb(7, 160, 177)
 }
 
-
+.Synonyms li {
+  list-style-type: none;
+}
