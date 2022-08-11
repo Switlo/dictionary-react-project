@@ -4,18 +4,18 @@ import Result from "./Result"
 import "./Dictionary.css";
 
 
-export default function Dictionary() {
+export default function Dictionary(props) {
 
-    let [keyWord, setKeyWord] = useState("");
+    let [keyWord, setKeyWord] = useState(props.defaultKeyWord);
     let [result, setResult] = useState(null);
+    let [loaded, setLoaded] = useState(false);
 
     function handleResponse(response) {
         setResult(response.data[0]);
     }
 
-function search(event) {
-    event.preventDefault();
-
+function search() {
+   
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyWord}`;
     axios.get(apiUrl).then(handleResponse);
 }
@@ -23,6 +23,13 @@ function search(event) {
 function keyWordChange(event) {
     setKeyWord(event.target.value);
 }
+
+function load() {
+    setLoaded(true);
+    search();
+  }
+
+  if (loaded) {
     return (
         <div className="Dictionary">
             <form onSubmit={search}>
@@ -30,9 +37,15 @@ function keyWordChange(event) {
                 type="search"
                 placeholder="Type a word and press Enter"
                 autoFocus={true}
-                onChange={keyWordChange}/>
+                onChange={keyWordChange}
+                defaultValue={props.defaultKeyWord}
+                />
             </form>
             <Result result={result}/>
         </div>
     )
+  } else {
+    load();
+    return null;
+  }
 }
