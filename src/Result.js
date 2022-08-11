@@ -1,5 +1,7 @@
 import React from "react";
 import Meaning from "./Meaning.js"
+import ReactPlayer from 'react-player';
+import './App.css';
 
 export default function Result(props) {
 
@@ -9,16 +11,27 @@ export default function Result(props) {
             <h2>
                 {props.result.word}
             </h2>
-            <p>{props.result.phonetic}</p>
+            <p>{props.result.phonetics[0].text}</p>
+            <a href={props.result.phonetics[0].audio} target="_blank">
+                Listen
+            </a>
 
+            {/* <p className="player-wrapper">
+                    <ReactPlayer
+                    className="react-player"
+                    url={props.result.phonetics[0].audio}
+                    />
+            </p> */}
+           
             {props.result.meanings.map(function(meaning, index) {
                 // return meaning.definitions[0].definition.example;
             return (
                 <div key={index}>
-                    <Meaning meaning={meaning}/>
+                    <Meaning meaning={meaning}/>                    
                 </div>
             )
             })}
+            
             </div>
         )
     } else {

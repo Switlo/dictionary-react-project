@@ -2,6 +2,7 @@ import React from "react";
 import Synonyms from "./Synonyms";
 import Examples from "./Examples";
 
+
 export default function Meaning(props) {
     console.log(props.meaning.definitions[0]);
     return (
@@ -15,7 +16,7 @@ export default function Meaning(props) {
                     <p className="fw-semibold text-primary">
                     {definition.definition}
                     </p>
-                    <p>
+                                        <p>
                         <Examples examples={definition.example} />
                     </p>
                     <p>
