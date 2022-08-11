@@ -1,6 +1,7 @@
 import React, {useState }  from "react";
 import axios from "axios";
-import Result from "./Result"
+import ResultTop from "./ResultTop";
+import ResultBottom from "./ResultBottom";
 import "./Dictionary.css";
 
 
@@ -32,16 +33,19 @@ function load() {
   if (loaded) {
     return (
         <div className="Dictionary">
+            <section>
             <form onSubmit={search}>
                 <input className="form-control form-control-sm"
                 type="search"
                 placeholder="Type a word and press Enter"
                 autoFocus={true}
                 onChange={keyWordChange}
-                defaultValue={props.defaultKeyWord}
+                // defaultValue={props.defaultKeyWord}
                 />
             </form>
-            <Result result={result}/>
+            <ResultTop result={result}/>
+            </section>
+            <ResultBottom result={result}/>
         </div>
     )
   } else {

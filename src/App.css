@@ -10,17 +10,17 @@
   display: block;
   margin: 15px auto;
   width: 80px;
-
 }
 
 .App-header h2 {
-  color: rgb(7, 160, 177)
+  color: rgb(7, 160, 177);
+  
 }
 
 .Synonyms li {
   list-style-type: none;
 }
 
-.Result .react-player {
+.ResultTop .react-player {
   margin: 0px auto;
-}
+  }

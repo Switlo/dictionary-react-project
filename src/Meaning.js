@@ -16,7 +16,7 @@ export default function Meaning(props) {
                     <p className="fw-semibold text-primary">
                     {definition.definition}
                     </p>
-                                        <p>
+                    <p>
                         <Examples examples={definition.example} />
                     </p>
                     <p>
