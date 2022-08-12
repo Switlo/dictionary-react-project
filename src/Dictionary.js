@@ -1,4 +1,4 @@
-import React, {useState }  from "react";
+import React, { useState }  from "react";
 import axios from "axios";
 import ResultTop from "./ResultTop";
 import ResultBottom from "./ResultBottom";
@@ -33,8 +33,8 @@ function load() {
     setLoaded(true);
     search();
   }
-
-  if (loaded) {
+   
+ if (loaded) {
     return (
         <div className="Dictionary">
             <section>
