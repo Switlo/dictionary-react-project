@@ -10,7 +10,7 @@ export default function App() {
       <div className="container">
         <header className="App-header">
           <img src={logo} className="App-logo img-fluid" alt="logo" />
-          <h2>What word meaning do you look up?</h2>
+          <h1>What word meaning do you look up?</h1>
         </header>
         <main>
           <Dictionary defaultKeyWord="hello"/>
