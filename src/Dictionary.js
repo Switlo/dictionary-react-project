@@ -39,7 +39,7 @@ function load() {
         <div className="Dictionary">
             <section>
             <form onSubmit={HandleSubmit}>
-                <input className="form-control form-control-sm"
+                <input className="form-control rounded-4"
                 type="search"
                 placeholder="Type a word and press Enter"
                 autoFocus={true}
@@ -49,8 +49,9 @@ function load() {
             </form>
             <ResultTop top={result}/>
             </section>
+            <section>
             <ResultBottom bottom={result}/>
-               
+            </section>
         </div>
     )
   } else {

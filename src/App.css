@@ -18,6 +18,8 @@
 }
 
 .Synonyms li {
+  display: inline-block;
+  padding-right: 10px;
   list-style-type: none;
 }
 

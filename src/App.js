@@ -13,7 +13,7 @@ export default function App() {
           <h2>What word meaning do you look up?</h2>
         </header>
         <main>
-          <Dictionary defaultKeyWord="peace"/>
+          <Dictionary defaultKeyWord="hello"/>
           {/* <Dictionary /> */}
         </main>
         <footer className="Footer">
