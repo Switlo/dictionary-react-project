@@ -1,6 +1,6 @@
 
 .Dictionary form {
-    width: 350px;
+    width: 340px;
     display: block;
     margin: 15px auto;
 }
@@ -17,3 +17,9 @@
     border-radius: 20px;
     margin: 10px 0;
   }
+
+@media (max-width: 375px) {
+    .Dictionary form {
+        width: 180px;
+    }
+}
