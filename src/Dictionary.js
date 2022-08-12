@@ -61,7 +61,7 @@ function load() {
             </form>
             <ResultTop top={result}/>
             </section>
-            <section>
+            <section className="PhotosSection">
             <Photos photos={photos}/>
             </section>
             <section>
