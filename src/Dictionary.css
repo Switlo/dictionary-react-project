@@ -13,10 +13,16 @@
     margin: 0 10px 20px;
 }
 
-.Photos img {
-    border-radius: 20px;
-    margin: 10px 0;
-  }
+.Photos img {    
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+.Photos div.col-4 {
+   padding: 7px;
+   text-align: center;
+   margin: 0;
+}
 
 /* @media (max-width: 393px) {
     .Dictionary form {
