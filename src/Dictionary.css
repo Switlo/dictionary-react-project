@@ -1,6 +1,6 @@
 
 .Dictionary form {
-    width: 340px;
+    max-width: 360px;
     display: block;
     margin: 15px auto;
 }
@@ -18,8 +18,8 @@
     margin: 10px 0;
   }
 
-@media (max-width: 375px) {
+/* @media (max-width: 393px) {
     .Dictionary form {
         width: 180px;
     }
-}
+} */
