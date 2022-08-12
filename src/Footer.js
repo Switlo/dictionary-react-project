@@ -17,8 +17,9 @@ export default function Footer() {
         | Open-sourced code is on&nbsp;
         <a href="https://github.com/Switlo/dictionary-react-project" target="_blank" rel="noopener noreferrer">
           GitHub
-        </a>
-        &nbsp;and hosted on <a href="https://keen-jelly-5530d0.netlify.app/" target="_blank" rel="noopener noreferrer">Netlify</a>
+        </a>&nbsp;
+        and hosted on <a href="https://keen-jelly-5530d0.netlify.app/" target="_blank" rel="noopener noreferrer">Netlify</a>&nbsp;
+        | Photos provided by&nbsp;<a href="https://www.pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a>
       </p>
     </div>
   );
