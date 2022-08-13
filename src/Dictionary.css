@@ -24,7 +24,7 @@
    margin: 0;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 412px) {
     .Dictionary .PhotosSection {
     padding: 7px 15px;
     }

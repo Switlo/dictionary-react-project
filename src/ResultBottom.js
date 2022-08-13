@@ -9,7 +9,6 @@ export default function ResultBottom(props) {
         return (
             <div className="ResultBottom">
                 {props.bottom.meanings.map(function(meaning, index) {
-                // return meaning.definitions[0].definition.example;
                 return (
                     <div key={index}>
                         <Meaning meaning={meaning}/>                    
