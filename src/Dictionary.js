@@ -15,12 +15,12 @@ export default function Dictionary(props) {
 
     function handleDictionaryResponse(response) {
         setResult(response.data[0]);
+        setLoaded(true);
     }
 
     function handlePexelsResponse(response) {
         setPhotos(response.data.photos);
-        console.log(response.data.photos)
-      }
+    }
 
 function search() {
    
@@ -42,35 +42,80 @@ function keyWordChange(event) {
 }
 
 function load() {
-    setLoaded(true);
     search();
   }
    
  if (loaded) {
-    return (
-        <div className="Dictionary">
+    if (result.word === props.defaultKeyWord) {
+        return (
+          <div className="Dictionary">
             <section>
-            <form onSubmit={HandleSubmit}>
-                <input className="form-control rounded-4"
-                type="search"
-                placeholder="Type your word and press Enter"
-                autoFocus={true}
-                onChange={keyWordChange}
-                // defaultValue={props.defaultKeyWord}
+              <form onSubmit={HandleSubmit}>
+                <input
+                  className="form-control form-control-sm"
+                  type="search"
+                  placeholder="Type a word and press Enter"
+                  autoFocus={true}
+                  onChange={keyWordChange}
+                  // defaultValue={props.defaultKeyWord}
                 />
-            </form>
-            <ResultTop top={result}/>
+              </form>
+              <ResultTop top={result} />
+            </section>
+          </div>
+        );
+      } else {
+        return (
+          <div className="Dictionary">
+            <section>
+              <form onSubmit={HandleSubmit}>
+                <input
+                  className="form-control form-control-sm"
+                  type="search"
+                  placeholder="Type a word and press Enter"
+                  autoFocus={true}
+                  onChange={keyWordChange}
+                  // defaultValue={props.defaultKeyWord}
+                />
+              </form>
+              <ResultTop top={result} />
             </section>
             <section className="PhotosSection">
-            <Photos photos={photos}/>
-            </section>
-            <section>
-            <ResultBottom bottom={result}/>
-            </section>
-        </div>
-    )
-  } else {
-    load();
-    return null;
+             <Photos photos={photos}/>
+             </section>
+            <ResultBottom bottom={result} />
+          </div>
+        );
+      }
+    } else {
+      load();
+      return null;
+    }
   }
-}
+//     return (
+//         <div className="Dictionary">
+//             <section>
+//             <form onSubmit={HandleSubmit}>
+//                 <input className="form-control rounded-4"
+//                 type="search"
+//                 placeholder="Type your word and press Enter"
+//                 autoFocus={true}
+//                 onChange={keyWordChange}
+//                 // defaultValue={props.defaultKeyWord}
+//                 />
+//             </form>
+//             <ResultTop top={result}/>
+//             </section>
+//             <section className="PhotosSection">
+//             <Photos photos={photos}/>
+//             </section>
+//             <section>
+//             <ResultBottom bottom={result}/>
+//             </section>
+//         </div>
+//     )
+//   } else {
+//     load();
+//     return null;
+//   }
+// }
